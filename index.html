@@ -33,14 +33,24 @@
     header {
       background: var(--teal);
       color: var(--white);
-      padding: 72px 0 64px;
-      text-align: center;
+      padding: 64px 0 56px;
     }
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    .hero-text { flex: 1; }
     .logo {
-      width: 148px; height: 148px;
-      margin-bottom: 28px;
+      width: 160px; height: 160px;
+      flex-shrink: 0;
       border-radius: 24px;
       box-shadow: 0 10px 30px rgba(16,69,68,0.45);
+    }
+    @media (max-width: 620px) {
+      .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
+      .logo { width: 120px; height: 120px; }
     }
     .badge {
       display: inline-block;
@@ -63,7 +73,7 @@
     }
     h1 .grad { color: var(--mint); }
     .sub { font-size: 18px; color: var(--mint); margin: 0 0 24px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 22px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
     .chip {
       font-size: 13px;
       color: var(--white);
@@ -122,10 +132,14 @@
 <body>
   <header>
     <div class="wrap">
-      <img class="logo" src="logo.jpg" alt="Open SoC4HE Workshop logo">
-      <div><span class="badge">HiPEAC Workshop</span></div>
-      <h1>OpenSoC4HE: <span class="grad">Open SoCs for Higher Education</span> in Computer Architecture</h1>
-      <p class="sub">A community hub for open-source hardware in the classroom.</p>
+      <div class="hero-top">
+        <div class="hero-text">
+          <div><span class="badge">HiPEAC Workshop</span></div>
+          <h1>OpenSoC4HE: <span class="grad">Open SoCs for Higher Education</span> in Computer Architecture</h1>
+          <p class="sub">A community hub for open-source hardware in the classroom.</p>
+        </div>
+        <img class="logo" src="logo.jpg" alt="Open SoC4HE Workshop logo">
+      </div>
       <div class="chips">
         <span class="chip">RISC-V SoCs</span>
         <span class="chip">RTL Design</span>
@@ -136,8 +150,6 @@
       <div><span class="meta">20th January 2027 · Co-located with HiPEAC</span></div>
     </div>
   </header>
-
-  <img class="banner" src="banner.jpg" alt="OpenSoC4HE Workshop — 20th January 2027, co-located with HiPEAC">
 
   <section>
     <div class="wrap">
