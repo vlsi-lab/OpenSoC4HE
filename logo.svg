@@ -9,9 +9,9 @@
   <!-- corner accent arcs, clipped to the rounded card -->
   <g clip-path="url(#rounded)">
     <!-- coral top-right -->
-    <path d="M240 0 A96 96 0 0 1 144 0 Z" fill="#ED6549"/>
+    <circle cx="234" cy="6" r="82" fill="#ED6549"/>
     <!-- seafoam bottom-left -->
-    <path d="M0 240 A96 96 0 0 1 0 144 Z" fill="#AED4C2"/>
+    <circle cx="6" cy="234" r="82" fill="#AED4C2"/>
   </g>
   <!-- teal frame -->
   <rect x="6" y="6" width="228" height="228" rx="40" fill="none" stroke="#0F4443" stroke-width="12"/>
